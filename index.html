@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>NPV & IRR Calculator</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jquery-linedtextarea.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    	<div class="alert alert-primary" role="alert" style="display: none;"></div>
+    	<div class="div-body">
+    		<div class="form-row div-header">
+    			<div class="form-group col-md-10">
+    				<h5>NPV & IRR Calculator</h5>
+				</div>
+				<div class="form-group col-md-2">
+	    			<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#helpModal">
+						&#63;
+					</button>
+				</div>
+    		</div>
+    		<div class="form-row">
+			    <div class="form-group col-md-12">
+		      		<label for="cashFlows">Cash flows:</label>
+			      	<textarea id="cashFlows" rows="10" cols="50" placeholder="E.g.:
+
+-10000.36 (1st line = Investment)
+3000.64 (2nd line onwards = Income)
+4200.50
+6800
+..."></textarea>
+			    </div>
+		    </div>
+		    <div class="form-row">
+			    <div class="form-group col-md-6">
+					<label for="rate">Rate of discount (NPV):</label>
+					<input type="text" class="form-control" id="rate" placeholder="0.1">
+			    </div>
+			    <div class="form-group col-md-6">
+					<label for="decimalPlaces">Decimal places:</label>
+					<input type="text" class="form-control" id="decimalPlaces" placeholder="6">
+			    </div>
+		    </div>
+		    <div class="form-check">
+				<input class="form-check-input" type="checkbox" id="investmentAsIncome">
+				<label class="form-check-label" for="investmentAsIncome">
+					Use Investment (1st line) as Income
+				</label>
+			</div>
+			<div class="div-footer">
+				<button class="btn btn-secondary" id="npv">Calculate NPV</button>
+				<button class="btn btn-secondary" id="irr">Calculate IRR</button>
+			</div>
+		</div>
+		<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" id="helpModalLabel">Help</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          			<span aria-hidden="true">&times;</span>
+		        		</button>
+		      		</div>
+			      	<div class="modal-body">
+			        	<p><a href="https://corporatefinanceinstitute.com/resources/knowledge/valuation/net-present-value-npv/" target="_blank">NPV</a> - Net Present Value is the value of all future cash flows (positive and negative) over the entire life of an investment discounted to the present. NPV analysis is a form of intrinsic valuation and is used extensively across finance and accounting for determining the value of a business, investment security, capital project, new venture, cost reduction program, and anything that involves cash flow.</p>
+			        	<p><a href="https://corporatefinanceinstitute.com/resources/knowledge/finance/internal-rate-return-irr/" target="_blank">IRR</a> - The Internal Rate of Return is the discount rate that makes the net present value (NPV) of a project zero. In other words, it is the expected compound annual rate of return that will be earned on a project or investment.</p>
+			        	<p>References: <a href="https://corporatefinanceinstitute.com/" target="_blank">https://corporatefinanceinstitute.com/</a></p>
+			      	</div>
+		      		<div class="modal-footer">
+	        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      		</div>
+		    	</div>
+		  	</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-linedtextarea.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
+    </body>
+</html>
